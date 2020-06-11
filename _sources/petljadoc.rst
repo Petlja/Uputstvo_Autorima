@@ -7,7 +7,7 @@ Petljadoc употреба
 
 Петљадок представља низ алата који омогућују прављење интерактивних материјала за учење какве можете видети на сајту `petlja.org <https:\\petlja.org>`__. Ови материјали представљају курсеве и приручнике у које је могуће укључити Пајтон код тако да се извршава у браузеру, различите вежбе, интерактивна питања, слике, видео, звучне фајлове и сл.  
 
-Петљадок у основи има `Runestone Interactive <https://github.com/RunestoneInteractive/RunestoneComponents`__ и `Sphinx <https://github.com/sphinx-doc/sphinx>`__. Runestone користи ``restructuredText`` као језик за обележавање текста (markup language) у својим изворним фајловима. Изворни фајлови ових Runestone пројеката су у ``.rst`` формату и помоћу Петљадока их претварамо у ``.html`` фајлове које браузер може да приказује. 
+Петљадок у основи има `Runestone Interactive <https://github.com/RunestoneInteractive/RunestoneComponents>`__ и `Sphinx <https://github.com/sphinx-doc/sphinx>`__. Runestone користи ``restructuredText`` као језик за обележавање текста (markup language) у својим изворним фајловима. Изворни фајлови ових Runestone пројеката су у ``.rst`` формату и помоћу Петљадока их претварамо у ``.html`` фајлове које браузер може да приказује. 
 
 Да бисте се упознали са синтаксом ``restructuredText-a`` препоручујемо да погледате овај `линк <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`__. Овде можете наћи и `синтаксни подсетник (cheatsheet) <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`__ који вам може бити користан приликом рада. 
 
@@ -16,7 +16,7 @@ Petljadoc употреба
 Приручници
 ::::::::::
 
-Примери приручника израђених на овај начин на Петљи, могу се наћи `овде <https://petlja.org/biblioteka/r/kursevi/prirucnik-python>`__ или `овде <https://petlja.org/biblioteka/r/kursevi/pygame-prirucnik`__. У изради приручника помоћу Петљадока добићете сличан изглед материјала овим материјалима.
+Примери приручника израђених на овај начин на Петљи, могу се наћи `овде <https://petlja.org/biblioteka/r/kursevi/prirucnik-python>`__ или `овде <https://petlja.org/biblioteka/r/kursevi/pygame-prirucnik>`__. У изради приручника помоћу Петљадока добићете сличан изглед материјала овим материјалима.
 
 Започињање рада на приручнику
 -----------------------------
@@ -297,8 +297,8 @@ Kада завршите са активностима, следи поље ар
 Корисни линкови
 :::::::::::::::
 
-* Поглавље `restructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_ из документације Sphinx-а 
-* `Runestone Author’s Guide <https://runestone.academy/runestone/static/authorguide/index.html>`_
-* `PetljaDoc README <https://github.com/Petlja/PetljaDoc/blob/master/README.md>`_ 
-* Приручник Текстуално програмирање у Пајтону, урађен у Петљадоку `source code <https://github.com/Petlja/TxtProgInPythonSrLat>`_ and 
-  `public preview <https://petlja.github.io/TxtProgInPythonSrLat/>`_
+* Поглавље `restructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`__ из документације Sphinx-а 
+* `Runestone Author’s Guide <https://runestone.academy/runestone/static/authorguide/index.html>`__
+* `PetljaDoc README <https://github.com/Petlja/PetljaDoc/blob/master/README.md>`__ 
+* Приручник Текстуално програмирање у Пајтону, урађен у Петљадоку `source code <https://github.com/Petlja/TxtProgInPythonSrLat>`__ and 
+  `public preview <https://petlja.github.io/TxtProgInPythonSrLat/>`__
