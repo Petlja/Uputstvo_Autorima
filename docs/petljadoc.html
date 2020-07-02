@@ -319,7 +319,8 @@ externalLinks: # опционо - односи се на линкове које
 </textarea>
 </div>
 <p>Други део <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајла односи се на лекције. У њему је такође јако важно одржати исту структуру назубљивања, али такође је јако важно обратити пажњу на имена фајлова и фолдера као и на <code class="docutils literal notranslate"><span class="pre">guid-e</span></code> елемената.  Овај део фајла почиње линијом у којо се налази <code class="docutils literal notranslate"><span class="pre">lessons:</span></code> (погледајте код испод или отворите <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> у свом пројекту).</p>
-<p>Након тога следе лекције које су увучене са два спејса. Свака лекција почиње редом у коме се налази <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">title:</span></code> У том реду потребно је написати назив лекције и он се <strong>МОРА ПОКЛАПАТИ</strong> са називом фолдера у који су смештени фајлови лекције унутар <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. На нашем примеру то су фолдери <code class="docutils literal notranslate"><span class="pre">Пример_лекција1</span></code> и <code class="docutils literal notranslate"><span class="pre">Пример_лекција2</span></code>.</p>
+<p>Након тога следе лекције које су увучене са два спејса. Свака лекција почиње редом у коме се налази <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">title:</span></code> У том реду потребно је написати назив лекције. У нашем примеру ставили смо као наслов прве лекције <strong>Наслов_1</strong>, а као наслов друге лекције <strong>Naslov_2</strong>.</p>
+<p>После наслова долази поље <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">folder:</span></code> у које се уноси назив фолдера у који су смештени фајлови лекције унутар <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. Он се <strong>МОРА ПОКЛАПАТИ</strong> са називом фолдера лекције (ћирилица, латиница, велика слова, знаци интерпункције…) На нашем примеру то су фолдери <code class="docutils literal notranslate"><span class="pre">Пример_лекција1</span></code> и <code class="docutils literal notranslate"><span class="pre">Пример_лекција2</span></code>.</p>
 <a class="reference internal image-reference" href="_images/kurs11.png"><img alt="_images/kurs11.png" class="align-center" src="_images/kurs11.png" style="width: 900px;" /></a>
 <p>Затим следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> лекције. Он је обавезан и представља јединствени идентификатор за сваки елемент. Њега можете добити тако што ћете га генерисати <a class="reference external" href="https://www.guidgenerator.com/online-guid-generator.aspx">овде</a> или тако што ћете приснути F1 у Visual Studio Code-у и ту изабрати опцију <code class="docutils literal notranslate"><span class="pre">insert</span> <span class="pre">guid</span></code> која ће вам бити видљива ако сте инсталирали екстензију коју смо навели у поглављу <em>Инсталација потребних алата</em>. Исти <code class="docutils literal notranslate"><span class="pre">guid</span></code> не смете да користите више од једном иначе ћете добити грешку приликом покретања команде <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>.</p>
 <p>Следеће поље представља опис лекције и оно је опционо. Поља <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">guid</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code> и <code class="docutils literal notranslate"><span class="pre">activities</span></code> морају бити поравната.</p>
@@ -341,7 +342,8 @@ externalLinks: # опционо - односи се на линкове које
              data-passivecode="true"  data-hidehistory=true
        >
 lessons:
-  - title: Пример_лекција1
+  - title: Наслов_1
+    folder: Пример_лекција1
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Прва лекција
     activities:
@@ -370,7 +372,8 @@ lessons:
     archived-activities: # ne smeta ni ako se ostave drugi atribudi iz aktivnosti, ali se gleda samo guid
     - guid: de4d8ced-7457-4257-a156-250bdb711d65
     - guid: 22752682-f23f-4df7-b590-e22780fda0a3
-  - title: Пример_лекција2
+  - title: Naslov_2
+    folder: Пример_лекција2
     guid: c79a8591-ad06-4e46-9d4d-8ecb5361cf8c
     description:  Друга лекција
     activities:
