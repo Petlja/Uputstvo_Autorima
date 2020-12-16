@@ -19,7 +19,7 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
-import pkg_resources
+
 from runestone import runestone_static_dirs, runestone_extensions
 import petljadoc
 
@@ -128,12 +128,11 @@ html_context = {'course_id': 'Uputstvo_autorima',
                 'proxy_uri_files': '/jobe/index.php/restapi/files/',
                 'downloads_enabled': 'false',
                 'enable_chatcodes': 'false',
-                'runestone_version': pkg_resources.require("runestone")[0].version
                }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'custom_theme'
+html_theme = 'petljadoc_runestone_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
