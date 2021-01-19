@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang=""></html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Petljadoc употреба &#8212; Uputstvo Autorima</title>
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -129,6 +129,21 @@
     <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
     <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
     <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Latn.js"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -155,15 +170,15 @@
 <script type="text/javascript">
   eBookConfig = {};
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
-  eBookConfig.app = eBookConfig.host+'/runestone';
-  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
   eBookConfig.course = 'Uputstvo_autorima';
-  eBookConfig.logLevel = 0;
-  eBookConfig.loginRequired = false;
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = true;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
   eBookConfig.basecourse = 'Uputstvo_autorima';
   eBookConfig.runestone_version = '';
   eBookConfig.imagesDir = '_images/';
@@ -214,15 +229,22 @@
 <h2>Шта је Petljadoc<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Петљадок представља низ алата који омогућују прављење интерактивних материјала за учење какве можете видети на сајту <a class="reference external" href="https:\petlja.org">petlja.org</a>. Ови материјали представљају курсеве и приручнике у које је могуће укључити Пајтон код тако да се извршава у браузеру, различите вежбе, интерактивна питања, слике, видео, звучне фајлове и сл.</p>
 <p>Петљадок у основи има <a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Runestone Interactive</a> и <a class="reference external" href="https://github.com/sphinx-doc/sphinx">Sphinx</a>. Runestone користи <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> као језик за обележавање текста (markup language) у својим изворним фајловима. Изворни фајлови ових Runestone пројеката су у <code class="docutils literal notranslate"><span class="pre">.rst</span></code> формату и помоћу Петљадока их претварамо у <code class="docutils literal notranslate"><span class="pre">.html</span></code> фајлове које браузер може да приказује.</p>
-<p>Да бисте се упознали са синтаксом <code class="docutils literal notranslate"><span class="pre">restructuredText-a</span></code> препоручујемо да погледате овај <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">линк</a>. Овде можете наћи и <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">синтаксни подсетник (cheatsheet)</a> који вам може бити користан приликом рада.</p>
-<p>Да бисте се упознали са могућностима <code class="docutils literal notranslate"><span class="pre">Runestone-a</span></code> и начинима како да одређене елементе (интерактивна питања, Пајтон код, слике…) укључите у свој материјал и форматирате, погледајте <a class="reference external" href="https://runestone.academy/runestone/static/authorguide/index.html">овај линк</a></p>
+<p>У наредним поглављима објаснићемо како да радите са Петљадоком. Прво што треба да одлучите је да ли ће ваш материјал бити приручник или курс. Ако први пут радите са Петљадоком, највероватније ће вам чланови тима Фондације Петља рећи да ли је ваш материјал курс или приручник.</p>
 </div>
 <div class="section" id="id2">
 <h2>Приручници<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Примери приручника израђених на овај начин на Петљи, могу се наћи <a class="reference external" href="https://petlja.org/biblioteka/r/kursevi/prirucnik-python">овде</a> или <a class="reference external" href="https://petlja.org/biblioteka/r/kursevi/pygame-prirucnik">овде</a>. У изради приручника помоћу Петљадока добићете сличан изглед материјала овим материјалима.</p>
 <div class="section" id="id3">
 <h3>Започињање рада на приручнику<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Да бисте почели са радом на новом приручнику помоћу Петљадока потребно је да прво отворите нови фолдер где ће се приручник налазити. Затим је потребно да се у командној линији позиционирате у тај фолдер, што ћете најлакше урадити ако у Windows прозору тог фолдера у search bar укуцате <code class="docutils literal notranslate"><span class="pre">cmd</span></code> и притиснете ентер.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Започет пројекат на Гитхабу</strong></p>
+<p>Врло је вероватно да ће приручник на коме је потребно да радите за вас већ бити започет и да ће бити довољно само да га преузмете са репозиторијума на Гитхабу. Ако је то случај, <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/github.html">овде</a> можете видети како да преузмете одговарајући пројекат са Гитхаба. Након тога, слободно прескочите овај одељак и идите на следећи поднаслов, изглед пројекта.</p>
+
+    </p></div></div>
+<p>Ако ипак сами започињете рад на новом приручнику мораћете сами да иницирате пројекат. Да бисте почели са радом на новом приручнику помоћу Петљадока потребно је да прво отворите нови фолдер где ће се приручник налазити. Затим је потребно да се у командној линији позиционирате у тај фолдер, што ћете најлакше урадити ако у Windows прозору тог фолдера у search bar укуцате <code class="docutils literal notranslate"><span class="pre">cmd</span></code> и притиснете ентер.</p>
 <a class="reference internal image-reference" href="_images/Prirucnik1.png"><img alt="_images/Prirucnik1.png" class="align-center" src="_images/Prirucnik1.png" style="width: 600px;" /></a>
 <p>То ће отворити командни прозор у коме је потребно покренути команду <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">init-runestone</span></code> која ће направити костур пројекта у изабраном фолдеру.</p>
 <a class="reference internal image-reference" href="_images/Prirucnik2.png"><img alt="_images/Prirucnik2.png" class="align-center" src="_images/Prirucnik2.png" style="width: 600px;" /></a>
@@ -257,6 +279,14 @@
 <p>Примере за курсеве можете наћи на <a class="reference external" href="https://petlja.org/net.kabinet">овој страници</a>.</p>
 <div class="section" id="id7">
 <h3>Започињање рада на курсу<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Започет пројекат на Гитхабу</strong></p>
+<p>Врло је вероватно да ће курс на коме је потребно да радите за вас већ бити започет и да ће бити довољно само да га преузмете са репозиторијума на Гитхабу. Ако је то случај, <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/github.html">овде</a> можете видети како да преузмете одговарајући пројекат са Гитхаба. Након тога, слободно прескочите овај одељак и идите на следећи поднаслов, изглед пројекта.</p>
+
+    </p></div></div>
 <p>Да бисте почели са радом на новом курсу помоћу Петљадока потребно је да прво отворите нови фолдер где ће се курс налазити. Затим је потребно да се у командној линији позиционирате у тај фолдер, што ћете најлакше урадити ако у Windows прозору тог фолдера у <em>search bar</em> укуцате <code class="docutils literal notranslate"><span class="pre">cmd</span></code> и притиснете ентер.</p>
 <a class="reference internal image-reference" href="_images/kurs1.png"><img alt="_images/kurs1.png" class="align-center" src="_images/kurs1.png" style="width: 600px;" /></a>
 <p>То ће отворити командни прозор у коме је потребно покренути команду <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">init-course</span></code> која ће направити костур пројекта у изабраном фолдеру.</p>
@@ -265,7 +295,7 @@
 </div>
 <div class="section" id="id8">
 <h3>Изглед пројекта<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<p>Пошто сте покренули <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">init-course</span></code> и подесили све параметре, у фолдеру пројекта биће започет пројекат са курсом и фолдер пројекта требало би да вам изгледа као на слици испод:</p>
+<p>Пошто на свом рачунару имате започету верзију пројекта, фолдер пројекта требало би да вам изгледа као на слици испод:</p>
 <a class="reference internal image-reference" href="_images/kurs4.png"><img alt="_images/kurs4.png" class="align-center" src="_images/kurs4.png" style="width: 600px;" /></a>
 <p>У основном директоријуму налази се неколико конфигурационих фајлова (<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, <code class="docutils literal notranslate"><span class="pre">pavement.py</span></code>, <code class="docutils literal notranslate"><span class="pre">conf-petljadoc.json</span></code>, <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>) које у већини случајева није потребно мењати, а служе подешавању одређених параметара пројекта. Поред ових фајлова налази се и фолдер <code class="docutils literal notranslate"><span class="pre">_templates</span></code> који садржи елементе који ће контролисати изглед .HTML фајлова (ни садржај овог фолдера углавном није потребно мењати).</p>
 <p>У фолдеру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> налази се <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајл (о њему ће бити речи касније) као и фолдери у којима су смештени изворни <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајлови, у којима се заправо пише садржај пројекта у <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> формату.</p>
@@ -273,7 +303,9 @@
 </div>
 <div class="section" id="id9">
 <h3>Рад на курсевима<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<p>Да бисте видели како ће се у браузеру приказати оно што пишете у <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајловима, потребно је да отворите командни прозор и да се позиционирате у фолдер пројекта, а затим покренете команду <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>.</p>
+<p>Да бисте видели како ће се у браузеру приказати оно што пишете у <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајловима, потребно је да отворите командни прозор и да се позиционирате у фолдер пројекта - ово ћете најлакше урадити тако што ћете у Windows прозору тог фолдера у <em>search bar</em> укуцати <code class="docutils literal notranslate"><span class="pre">cmd</span></code> и притиснути ентер.</p>
+<a class="reference internal image-reference" href="_images/kurs1.png"><img alt="_images/kurs1.png" class="align-center" src="_images/kurs1.png" style="width: 600px;" /></a>
+<p>Након тога, унесите команду <cite>petljadoc preview</cite> и притисните ентер.</p>
 <a class="reference internal image-reference" href="_images/kurs5.png"><img alt="_images/kurs5.png" class="align-center" src="_images/kurs5.png" style="width: 600px;" /></a>
 <p>Након неколико секунди, ово ће од ваших изворних фајлова направити .HTML фајлове који ће се налазити у новонасталом <code class="docutils literal notranslate"><span class="pre">_build</span></code> фолдеру. Такође ово ће отворити браузер прозор са вашим курсем. Ако је све протекло како треба, ваш командни прозор требало би овако да изгледа</p>
 <a class="reference internal image-reference" href="_images/kurs6.png"><img alt="_images/kurs6.png" class="align-center" src="_images/kurs6.png" style="width: 600px;" /></a>
@@ -281,10 +313,21 @@
 <a class="reference internal image-reference" href="_images/kurs6.png"><img alt="_images/kurs6.png" class="align-center" src="_images/kurs6.png" style="width: 600px;" /></a>
 <p>Након тога отвориће се у браузеру почетна страна курса која ће изгледати овако</p>
 <a class="reference internal image-reference" href="_images/kurs7.png"><img alt="_images/kurs7.png" class="align-center" src="_images/kurs7.png" style="width: 600px;" /></a>
-<p><strong>Овај командни прозор оставите отворен све време док будете радили на приручнику.</strong> Ово је важно зато што на овај начин можете пратити промене које уносите у изворне <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајлове одмах након што их запамтите. Дакле, када у изворни фајл унесете неке промене и запамтите их, након неколико секунди, у браузеру ћете моћи да видите како те промене изгледају у .HTML фајловима (докле год ради командни прозор у коме је покренута команда <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>). Препоручујемо да .rst фајлове отварате помоћу едитора Visual Studio Code тако што ћете у фолдеру пројекта кликнути на десни клик и изабрати опцију <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">with</span> <span class="pre">code</span></code>.</p>
+<p><strong>Овај командни прозор оставите отворен све време док будете радили на курсу.</strong> Ово је важно зато што на овај начин можете пратити промене које уносите у изворне <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајлове одмах након што их запамтите. Дакле, када у изворни фајл унесете неке промене и запамтите их, након неколико секунди, у браузеру ћете моћи да видите како те промене изгледају у .HTML фајловима (докле год ради командни прозор у коме је покренута команда <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>). Препоручујемо да .rst фајлове отварате помоћу едитора Visual Studio Code тако што ћете у фолдеру пројекта кликнути на десни клик и изабрати опцију <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">with</span> <span class="pre">code</span></code>.</p>
 <a class="reference internal image-reference" href="_images/kurs8.png"><img alt="_images/kurs8.png" class="align-center" src="_images/kurs8.png" style="width: 600px;" /></a>
 <p>Ово ће отворити нови Visual Studio Code прозор у коме ћете са леве стране моћи да видите све фајлове и фолдере који се налазе унутар фолдера са пројектом, а, када одаберете жељени фајл, у средини ће бити садржај тог фајла.</p>
 <a class="reference internal image-reference" href="_images/kurs9.png"><img alt="_images/kurs9.png" class="align-center" src="_images/kurs9.png" style="width: 600px;" /></a>
+<div class="section" id="rst">
+<h4>Модификовање .rst фајлова<a class="headerlink" href="#rst" title="Permalink to this headline">¶</a></h4>
+<p>Већина вашег рада свешће се на писање текста у restructuredText формату у .rst фајловима који се налазе у фолдеру _sources. Покушајте да промените неку реч у оквиру неког од .rst фајлова који се налазе у субфолдерима _sources фолдера и да запамтите ту промену (CTRL + S у Visual Studio Code). У позадини је, наравно, неопходно да постоји покренут командни прозор у коме је извршена команда <cite>petljadoc preview</cite>. Видећете како се у браузеру у реалном времену мења оно што сте написали.</p>
+<p>Препоручујемо да пре него што наставите са радом погледате овај курс <a class="reference external" href="https://petlja.github.io/demo_kurs/">https://petlja.github.io/demo_kurs/</a>.
+На овој страници можете пронаћи низ корисних савета и примера који ће вам помоћи да боље разумете како да форматирате своје restructuredText фајл и како у њега укључите елементе које желите. Такође, препоручујемо да <a class="reference external" href="https://github.com/Petlja/Primer_Kurs/archive/master.zip">овај пројекат</a> користите као мустру ако будете имали проблема са форматирањем фајлова или укључивањем фајлова у пројекат.</p>
+<p>Ако вам затреба нешто што се не налази у демо курсу, а потребно вам је за рад, погелдајте овај <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">линк</a>. Овде можете наћи и <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">синтаксни подсетник (cheatsheet)</a> који вам може бити користан приликом рада.</p>
+<p>Слободно се враћајте на линкове из овог поглавља и користите их као подсетник током целог процеса писања материјала.</p>
+<p>Међутим, поред модификације већ постојећих .rst фајлова, биће потребно да додајете и нове активности и за то ће бити неопходно да ажурирате .yaml фајл.</p>
+</div>
+<div class="section" id="yaml">
+<h4>Форматирање .yaml фајла<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h4>
 <p><strong>Јако је важно</strong> да током рада на курсу правилно ажурирате (попуњавате и форматирате) <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајл. У овом фајлу налазе се сви релеватни подаци које Петљадок користи да би од изворних фајлова направио .html фајлове. Све нове лекције и садржаје које желите да укључите у свој пројекат морате, са једне стране убацити на одговарајуће место у структури пројекта (у одговарајућ фолдер), а са друге стране морате их укључити на одговарајућ начин укључити у <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code>.</p>
 <p>Ово подразумева да <strong>ОБАВЕЗНО</strong> поштујете структуру назубљивања каква постоји у овом фајлу, Такође, јако је важно да се у подаци који се наводе у <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> поклапају са стањем у остатку пројекта. Када отворите <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> он ће изгледати као на слици испод.</p>
 <a class="reference internal image-reference" href="_images/kurs10.png"><img alt="_images/kurs10.png" class="align-center" src="_images/kurs10.png" style="width: 900px;" /></a>
@@ -329,7 +372,7 @@ externalLinks: # опционо - односи се на линкове које
 <p>Испод тога налази се фајл који представља изворни фајл ове активности. То може бити .rst фајл који се налази у фолдеру лекције (субфолдер унутар фолдера <code class="docutils literal notranslate"><span class="pre">_sources</span></code>.) или .pdf фајл који треба да се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">_static</span></code> (у фолдеру пројекта). Име фајла овде мора <strong>дословно</strong> да се наведе (обратите пажњу на писмо, величину слова и на екстензију фајла).</p>
 <p>Након тога следи опис активности који је опцион и након тога следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> (потребно је поново генерисати нови, јединствени <code class="docutils literal notranslate"><span class="pre">guid</span></code> за сваку активност).</p>
 <p>Ако је активност типа <code class="docutils literal notranslate"><span class="pre">video</span></code>, потребно је навести линк ка видеу и наслов видеа може бити произвољан.</p>
-<p>Ако је активност типа <code class="docutils literal notranslate"><span class="pre">quiy</span></code>, потребно је навести име .rst фајла у коме се налазе питања за квиз, а који је смештен у фолдер лекције у оквиру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера.</p>
+<p>Ако је активност типа <code class="docutils literal notranslate"><span class="pre">quiz</span></code>, потребно је навести име .rst фајла у коме се налазе питања за квиз, а који је смештен у фолдер лекције у оквиру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера.</p>
 <p>У лекцији нема ограничења на број активности.</p>
 <p>Kада завршите са активностима, следи поље архивираних активности које је потребно поравнати са насловом лекције. Овде је потребно навести листу guid-a активности које су некада постојале у курсу и објављене су на петљи, а сада више не постоје. Ако таквих активности нема, слободно игноришите овај део фајла.</p>
 <p>Када желите да пређете на следећу лекцију, пазите на поравнање и на то да сваки елемент мора имати јединствен <code class="docutils literal notranslate"><span class="pre">guid</span></code>. Важно је да свака нова лекција буде поравната са претходним лекцијама.</p>
@@ -389,6 +432,7 @@ archived-lessons: # ne smeta ni ako se ostave drugi atribudi iz aktivnosti, ali 
 - guid: 29a3a23a-0cdb-4a2b-ad6b-611d36c39db5
 </textarea>
 </div>
+<p>Као што сте видели до сад, важно је да алтернирате између Visual Studio Code-a у коме ћете гледати изворне фајлове и браузера у коме ћете видети приказ онога што правите у изворним фајловима. Такође, важно је да када год додајете нешто ново од изворних фајлова, то на одговарајући начин назначите у .yaml фајлу како би Петљадок знао шта да прикаже у браузеру.</p>
 
     <div class="course-box course-box-info">
         <div class="course-content">
@@ -402,21 +446,23 @@ archived-lessons: # ne smeta ni ako se ostave drugi atribudi iz aktivnosti, ali 
 <li><p>Обавезно обратите пажњу на имена фајлова и фолдера када их наводите у <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајлу</p></li>
 <li><p>Сваки елемент <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајла мора да има свој јединствени <code class="docutils literal notranslate"><span class="pre">guid</span></code></p></li>
 <li><p>Свака нова лекција и активност коју желите да укључите у курс морају бити наведене у <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајлу.</p></li>
-<li><p>Ослоните се на мустре које смо вам припремили како бисте видели</p></li>
+<li><p>Ослоните се на мустре које смо вам припремили како бисте видели како да најлакше форматирате свој пројекат.</p></li>
 </ul>
 
     </p></div></div>
-<p>За инструкције како модификујете саме фајлове, како да укључујете поједине елементе и међусобно повезујете фајлове, погледајте .rst fajlove који се налазе у фолдерима лекција унутар <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. Препоручујемо да покренете <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code> и упоредите оно што се види у браузеру са оним што се види у .rst фајловима у оквиру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. Такође, можете користити и <a class="reference external" href="https://github.com/Petlja/Primer_Kurs/archive/master.zip">овај пројекат</a> као мустру која вам може помоћи у раду.</p>
+</div>
 </div>
 </div>
 <div class="section" id="id10">
 <h2>Корисни линкови<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>Демо курс као помоћ за форматирање фајлова - <a class="reference external" href="https://petlja.github.io/demo_kurs/">https://petlja.github.io/demo_kurs/</a></p></li>
 <li><p>Поглавље <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">restructuredText</a> из документације Sphinx-а</p></li>
 <li><p><a class="reference external" href="https://runestone.academy/runestone/static/authorguide/index.html">Runestone Author’s Guide</a></p></li>
 <li><p><a class="reference external" href="https://github.com/Petlja/PetljaDoc/blob/master/README.md">PetljaDoc README</a></p></li>
 <li><p>Приручник Текстуално програмирање у Пајтону, урађен у Петљадоку <a class="reference external" href="https://github.com/Petlja/TxtProgInPythonSrLat">source code</a> and
 <a class="reference external" href="https://petlja.github.io/TxtProgInPythonSrLat/">public preview</a></p></li>
+<li><p>Мустра за курс коју можете користити приликом рада <a class="reference external" href="https://github.com/Petlja/Primer_Kurs/archive/master.zip">https://github.com/Petlja/Primer_Kurs/archive/master.zip</a></p></li>
 </ul>
 </div>
 </div>

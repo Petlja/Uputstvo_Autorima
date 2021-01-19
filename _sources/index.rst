@@ -10,5 +10,6 @@
       instalacija_python.rst
       petljadoc.rst
       github.rst
+      workflow.rst
 
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang=""></html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Инсталација потребних алата &#8212; Uputstvo Autorima</title>
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -129,6 +129,21 @@
     <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
     <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
     <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Latn.js"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -155,15 +170,15 @@
 <script type="text/javascript">
   eBookConfig = {};
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
-  eBookConfig.app = eBookConfig.host+'/runestone';
-  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
   eBookConfig.course = 'Uputstvo_autorima';
-  eBookConfig.logLevel = 0;
-  eBookConfig.loginRequired = false;
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = true;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
   eBookConfig.basecourse = 'Uputstvo_autorima';
   eBookConfig.runestone_version = '';
   eBookConfig.imagesDir = '_images/';
@@ -213,11 +228,21 @@
 <p>У овом делу упутства биће објашњено како да инсталирате потребну верзију Пајтона и све пакете потребне за израду курсева и приручника.</p>
 <div class="section" id="id2">
 <h2>Инсталација Пајтона<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Да бисте користили <code class="docutils literal notranslate"><span class="pre">Petljadoc</span></code> (Петљадок), неопходно је да на свом рачунару имате инсталиран Пајтон. Потребно је да инсталирате верзију 3.7.7. Актуелна верзија Пајтона у тренутку писања овог упутства је 3.8.3, али због некомпатибилности одређених компоненти Петљадока са овом верзијом Пајтона, неопходно је да инсталирате верзију 3.7.7 коју можете преузети са овог <a class="reference external" href="https://www.python.org/ftp/python/3.7.7/python-3.7.7.exe">линка</a>.</p>
-<p>Ако већ имате инсталирану верзију 3.8.х, препоручујемо да је деинсталирате. То радите исто као деинсталацију било ког програма на Windowsу. Такође, препоручујемо да након деинсталације обришете и фолдер ове верзије Пајтона који се (најчешће) налази на локацији сличној овој <em>C:\Users\Vaše_korisničko_ime\AppData\local\Programs\Python</em>, како не би дошло до проблема приликом инсталација библиотека (алтернативно, то може бити и путања <em>C:\Program Files\Python</em> или
-<em>C:\Pyhon…</em>). Наравно, ову верзију не морате обрисати и можете користити обе верзије Пајтона истовремено, али тај случај неће бити покривен овим упутством и то не препоручујемо осим ако нисте потпуно сигурни у своје знање и имате искуства са коришћењем више различитих верзија истовремено.</p>
-<p>Покрените инсталациони фајл који сте преузели.</p>
-<p>Обавезно обележите поље <strong>Add Python 3.7 to PATH</strong> и кликните на <strong>Install Now</strong>.</p>
+<p>Да бисте користили <code class="docutils literal notranslate"><span class="pre">Petljadoc</span></code> (Петљадок), неопходно је да на свом рачунару имате инсталиран Пајтон, и то верзију која је новија од 3.6.х. У тренутку писања овог упутства, актуелна верзија Пајтона је 3.9.1 и она је компатибилна са свим алатима обухваћеним Петљадоком. Ову верзију можете преузети са следећег линка (за Windows оперативне системе) <a class="reference external" href="https://www.python.org/ftp/python/3.9.1/python-3.9.1.exe">https://www.python.org/ftp/python/3.9.1/python-3.9.1.exe</a></p>
+
+    <div data-component="reveal" id="napomena_bojе"   data-showtitle="Различите верзије Пајтона" data-hidetitle="Сакриј прозор">
+    
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Различите верзије Пајтона</strong></p>
+<p>Ако већ имате инсталирану ранију верзије Пајтона, важно је да она буде новија од верзије 3.6.х. Ако желите да на свом рачунару истовремено користите различите верзије Пајтона (задржите своју стару верзију и инсталирате нову), и то је могуће, али тај случај неће бити покривен овим упутством и то не препоручујемо осим ако нисте потпуно сигурни у своје знање и имате искуства са коришћењем више различитих верзија истовремено.</p>
+
+    </p></div></div>
+
+    </div>
+    <p>Након што се завршило преузимање са инсталационог фајла са наведеног линка, покрените га како бисте започели са инсталацијом.</p>
+<p>Обавезно обележите поље <strong>Add Python 3.9 to PATH</strong> и кликните на <strong>Install Now</strong>.</p>
 <a class="reference internal image-reference" href="_images/Python1.png"><img alt="_images/Python1.png" class="align-center" src="_images/Python1.png" style="width: 600px;" /></a>
 <p>Пајтон ће започети инсталацију и, ако је све у реду то би требало да изгледа као на слици испод.</p>
 <a class="reference internal image-reference" href="_images/Python2.png"><img alt="_images/Python2.png" class="align-center" src="_images/Python2.png" style="width: 600px;" /></a>
@@ -228,17 +253,17 @@
 <h2>Инсталација Petljadoc<a class="headerlink" href="#petljadoc" title="Permalink to this headline">¶</a></h2>
 <p>Када сте завршили са инсталацијом Пајтона, потребно је да инсталирате Петљадок. Петљадок представља пакет алата намењених изради интерактивних онлајн материјала за учење, налик на оне који се налазе на сајту <a class="reference external" href="https:\petlja.org">petlja.org</a>.  Неопходно је да током инсталације ових пакета имате приступ интернету. Да бисте инсталирали Петљадок, потребно је да прво отворите командни прозор, што ћете најлакше учинити ако истовремено притиснете <strong>windows button + r</strong>, у њега укуцате <strong>CMD</strong> и притиснете ентер.</p>
 <a class="reference internal image-reference" href="_images/run.png"><img alt="_images/run.png" class="align-center" src="_images/run.png" style="width: 400px;" /></a>
-<p>Ово ће отворити командни прозор и потребно је да у њему покренете следећу команду <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">https://github.com/Petlja/PetljaDoc/archive/master.zip</span></code> (ако ова команда не буде радила покушајте са <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/Petlja/PetljaDoc/archive/master.zip</span></code>).</p>
+<p>Ово ће отворити командни прозор и потребно је да у њему покренете следећу команду <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">petljadoc</span></code> (ако ова команда не буде радила покушајте са <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">petljadoc</span></code>).</p>
 <a class="reference internal image-reference" href="_images/cmd1.png"><img alt="_images/cmd1.png" class="align-center" src="_images/cmd1.png" style="width: 600px;" /></a>
 <p>Ово ће покренути инсталацију која ће трајати неколико минута. Када је инсталација завршена, добићете поруку од система да је успешно инсталирано мноштво компоненти (као на слици испод). Слободно занемарите поруку о унапређењу верзије <code class="docutils literal notranslate"><span class="pre">pip-a</span></code>.</p>
 <a class="reference internal image-reference" href="_images/cmd2.png"><img alt="_images/cmd2.png" class="align-center" src="_images/cmd2.png" style="width: 600px;" /></a>
-<p>Након овога, покрените следећу команду <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">https://github.com/Petlja/RunestoneComponents-Petlja/archive/master.zip</span></code> (ако ова команда не буде радила покушајте са <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/Petlja/RunestoneComponents-Petlja/archive/master.zip</span></code>). Ако је све у реду, поново ћете добити поруку да је мноштво компоненти инсталирано успешно (врло сличну овој на слици изнад).</p>
 </div>
 <div class="section" id="visual-studio-code">
 <h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h2>
 <p>Пре него што почнете са радом, потребно је да инсталирате и неки текстуални едитор како бисте могли да израђујете и модификујете изворне фајлове у материјалима које правите. То може бити било који текстуални едитор (<strong>Notepad++</strong>, <strong>Atom</strong>, <strong>Sublime Text</strong>), али ми препоручујемо да то буде Visual Studio Code и примери у остатку овог упутства биће представљени у овом едитору. Да бисте га инсталирали, потребно је да одете на <a class="reference external" href="https://code.visualstudio.com/docs/?dv=win">овај линк</a> и преузимање инсталационог фајла требало би да почне аутоматски (ако преузимање не почне, можете одговарајућу верзију за ваш оперативни систем преузети <a class="reference external" href="https://code.visualstudio.com/download">овде</a>). Када преузмете инсталациони фајл, отпочните инсталацију и само пратите инсталер (кораци су прилично самообјашњујући). Једино је потребно да обратите пажњу на четврти корак инсталације у коме је потребно да поља попуните као на слици испод.</p>
 <a class="reference internal image-reference" href="_images/vsc.png"><img alt="_images/vsc.png" class="align-center" src="_images/vsc.png" style="width: 500px;" /></a>
 <p>Након што инсталирате Visual Studio Code, покрените га и инсталирајте екстензију која се зове <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">GUID</span></code>. То ћете урадити тако што ћете са леве стране изабрати иконицу за екстензије (личи на тетрис), затим у поље за претраживање унети стринг <code class="docutils literal notranslate"><span class="pre">Guid</span></code> и онда пронаћи екстензију и кликнути на <code class="docutils literal notranslate"><span class="pre">Install</span></code>. Ова екстензија биће вам потребна касније за рад са Петљадоком.</p>
+<a class="reference internal image-reference" href="_images/vsc2.png"><img alt="_images/vsc2.png" class="align-center" src="_images/vsc2.png" style="width: 800px;" /></a>
 </div>
 <div class="section" id="git-github-desktop">
 <h2>Инсталација Git и Github Desktop<a class="headerlink" href="#git-github-desktop" title="Permalink to this headline">¶</a></h2>
