@@ -242,6 +242,14 @@
 <h2>Шта је Petljadoc<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Петљадок представља низ алата који омогућују прављење интерактивних материјала за учење какве можете видети на сајту <a class="reference external" href="https:\petlja.org">petlja.org</a>. Ови материјали представљају курсеве и приручнике у које је могуће укључити Пајтон код тако да се извршава у браузеру, различите вежбе, интерактивна питања, слике, видео, звучне фајлове и сл.</p>
 <p>Петљадок у основи има <a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Runestone Interactive</a> и <a class="reference external" href="https://github.com/sphinx-doc/sphinx">Sphinx</a>. Runestone користи <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> као језик за обележавање текста (markup language) у својим изворним фајловима. Изворни фајлови ових Runestone пројеката су у <code class="docutils literal notranslate"><span class="pre">.rst</span></code> формату и помоћу Петљадока их претварамо у <code class="docutils literal notranslate"><span class="pre">.html</span></code> фајлове које браузер може да приказује.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Ажурирање верзије Петљадока</p>
+<p>Како је Петљадок алат који се стално развија, не заборавите да са времена на време унапредите верзију коју имате на свом рачунару. То можете урадити тако што ћете отворити командни прозор и покренути команду <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">petljadoc</span> <span class="pre">--upgrade</span></code> што ће инсталирати нову верзију Петљадока. Пре него што покренете ову команду, неопходно је да већ имате инсталиран Петљадок на начин на који је објашњено <a class="reference external" href="instalacija_python.html">овде</a>.</p>
+
+    </p></div></div>
 <p>У наредним поглављима објаснићемо како да радите са Петљадоком. Прво што треба да одлучите је да ли ће ваш материјал бити приручник или курс. Ако први пут радите са Петљадоком, највероватније ће вам чланови тима Фондације Петља рећи да ли је ваш материјал курс или приручник.</p>
 </div>
 <div class="section" id="id2">
@@ -269,7 +277,7 @@
 <p>Пошто сте покренули <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">init-runestone</span></code> и подесили све параметре, у фолдеру пројекта биће започет пројекат са приручником и фолдер пројекта требало би да вам изгледа као на слици испод:</p>
 <a class="reference internal image-reference" href="_images/Prirucnik4.png"><img alt="_images/Prirucnik4.png" class="align-center" src="_images/Prirucnik4.png" style="width: 600px;" /></a>
 <p>У основном директоријуму налази се неколико конфигурационих фајлова (<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, <code class="docutils literal notranslate"><span class="pre">pavement.py</span></code>, <code class="docutils literal notranslate"><span class="pre">conf-petljadoc.json</span></code>, <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>) које у већини случајева није потребно мењати, а служе подешавању одређених параметара пројекта. Поред ових фајлова налази се и фолдери <code class="docutils literal notranslate"><span class="pre">_templates</span></code> и <code class="docutils literal notranslate"><span class="pre">_static</span></code> садржe елементе који ће контролисати изглед .HTML фајлова (ни њих углавном није потребно мењати).</p>
-<p>У фолдеру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> налазе се изворни <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајлови у којима се заправо пише сав садржај пројекта у <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> формату. У том фолдеру ће на почетку бити <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> фајл и <code class="docutils literal notranslate"><span class="pre">primer.rst</span></code>. Ово су два фајла која вам могу послужити као мустра за даљи рад са приручницима.</p>
+<p>У фолдеру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> налазе се изворни <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајлови у којима се заправо пише сав садржај пројекта у <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> формату. У том фолдеру ће на почетку бити <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> фајл.</p>
 </div>
 <div class="section" id="id5">
 <h3>Рад на приручницима<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
@@ -283,15 +291,32 @@
 <a class="reference internal image-reference" href="_images/Prirucnik8.png"><img alt="_images/Prirucnik8.png" class="align-center" src="_images/Prirucnik8.png" style="width: 600px;" /></a>
 <p>Ово ће отворити нови Visual Studio Code прозор у коме ћете са леве стране моћи да видите све фајлове и фолдере који се налазе унутар фолдера са пројектом, а, када одаберете жељени фајл, у средини ће бити садржај тог фајла.</p>
 <a class="reference internal image-reference" href="_images/Prirucnik9.png"><img alt="_images/Prirucnik9.png" class="align-center" src="_images/Prirucnik9.png" style="width: 600px;" /></a>
-<p><strong>Јако је важно</strong> да током рада на пројекту задржите <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> фајл који се налази у фолдеру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> и који ће бити насловна страна вашег приручника и где се обично реферише на све остале фајлове у оквиру садржаја. Ако желите да додате нови фајл, у коме ћете, на пример, направити нову лекцију, потребно је да у фолдер <code class="docutils literal notranslate"><span class="pre">_sources</span></code> додате нови <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајл и да поново покренете <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code> (или, ако вам је отворен командни прозор у коме сте раније покренули ову команду, само запамтите неки од фајлова поново и Петљадок ће сам ажурирати садржај који се приказује у браузеру).</p>
-<p>За инструкције како модификујете саме фајлове, како да укључујете поједине елементе и међусобно повезујете фајлове, погледајте <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> и <code class="docutils literal notranslate"><span class="pre">primer.rst</span></code> који се налазе у <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдеру новог пројекта. Препоручујемо да покренете <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code> и упоредите оно што се види у браузеру са оним што се види у .rst фајловима у оквиру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. Такође, можете користити и <a class="reference external" href="https://github.com/Petlja/Primer_Prirucnik/archive/master.zip">овај пројекат</a> као мустру која вам може помоћи у раду.</p>
+<div class="section" id="index-rst">
+<h4>Index.rst и рад са фајловима<a class="headerlink" href="#index-rst" title="Permalink to this headline">¶</a></h4>
+<p><strong>Јако је важно</strong> да током рада на пројекту задржите <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> фајл који се налази у фолдеру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> и који ће бити насловна страна вашег приручника, где се обично реферише на све остале фајлове у оквиру садржаја. У овом фајлу треба да се налази уводни текст који ће читаоцима представити приручник, као и садржај приручника у оквиру кога ће бити улинковани сви фајлови који се налазе у <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдеру.</p>
+<p>Садржај се прави помоћу директиве <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code> у којој се наводи листа свих .rst фајлова обухваћених пројектом. (о употреби директива у оквиру Петљадок пројеката погледајте <a class="reference external" href="https://petlja.github.io/demo_kurs/02_basics/02_directives.html">овде</a>)</p>
+<p>Пример форматирања садражаја:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+
+   naslov_fajla1.rst
+   naslov_fajla2.rst
+   naslov_fajla.rst
+   naslov_fajla4.rst
+</pre></div>
+</div>
+<p>Директива <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code> може имати опцију <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code> која као аргумент узима цео број који одређује ниво хијерархије (да бисте сазнали више о хијерархији наслова погледајте <a class="reference external" href="https://petlja.github.io/demo_kurs/02_basics/01_formatting.html#id5">овде</a>) наслова и поднаслова који ће бити укључени у садржај. Када је <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code> једнако 1, биће приказани само главни наслови у фајловима, када је ниво хијерархије 2, приказаће се и сви поднаслови, када је 3, биће приказани и сви поднаслови у оквиру поднаслова итд. У овом упутству је <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code> садржаја једнака 3 и зато садржај приказује наслове 3 нивоа хијерархије:</p>
+<a class="reference internal image-reference" href="_images/toc.png"><img alt="_images/toc.png" class="align-center" src="_images/toc.png" style="width: 600px;" /></a>
+<p>Ако желите да додате нови фајл, у коме ћете, на пример, направити нову лекцију, потребно је да у фолдер <code class="docutils literal notranslate"><span class="pre">_sources</span></code> додате нови <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајл и да поново покренете <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code> (или, ако вам је отворен командни прозор у коме сте раније покренули ову команду, само запамтите неки од фајлова поново и Петљадок ће сам ажурирати садржај који се приказује у браузеру). Такође, важно је да у том тренутку свој нови фајл улинкујете у садржај, пошто ћете у супротном добити поруку о грешци.</p>
+<p>За инструкције како модификујете саме фајлове, како да укључујете поједине елементе и међусобно повезујете фајлове, погледајте наш <a class="reference external" href="https://petlja.github.io/demo_kurs/02_basics/01_formatting.html#id5">Демо курс</a>. Такође, можете користити и <a class="reference external" href="https://github.com/Petlja/Primer_Prirucnik/archive/master.zip">овај пројекат</a> као мустру која вам може помоћи у раду.</p>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>Курсеви<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id8">
+<h2>Курсеви<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>Примере за курсеве можете наћи на <a class="reference external" href="https://petlja.org/net.kabinet">овој страници</a>.</p>
-<div class="section" id="id7">
-<h3>Започињање рада на курсу<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h3>Започињање рада на курсу<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 
     <div class="course-box course-box-info">
         <div class="course-content">
@@ -306,16 +331,16 @@
 <a class="reference internal image-reference" href="_images/kurs2.png"><img alt="_images/kurs2.png" class="align-center" src="_images/kurs2.png" style="width: 600px;" /></a>
 <p>Када покренете ову команду потребно је да подесите још неколико параметара. Можете оставити предложене вредности (у угластим заградама) тако што ћете за сваки параметар притиснути ентер без уписивања било чега. Алтернативно, можете самостално подесити вредности ових параметара. На прво питање одговорите са <code class="docutils literal notranslate"><span class="pre">y</span></code> како бисте наставили даље. Потребно је да онда дате име пројекту, напишете име аутора, дате наслов који ће се појављивати у пројекту, изабрати програмски језик за примере кода који ће се извршавати у браузеру и на крају одабрати HTML тему целог пројекта (овде свакако оставите предложену вредност).</p>
 </div>
-<div class="section" id="id8">
-<h3>Изглед пројекта<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>Изглед пројекта<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>Пошто на свом рачунару имате започету верзију пројекта, фолдер пројекта требало би да вам изгледа као на слици испод:</p>
 <a class="reference internal image-reference" href="_images/kurs4.png"><img alt="_images/kurs4.png" class="align-center" src="_images/kurs4.png" style="width: 600px;" /></a>
 <p>У основном директоријуму налази се неколико конфигурационих фајлова (<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, <code class="docutils literal notranslate"><span class="pre">pavement.py</span></code>, <code class="docutils literal notranslate"><span class="pre">conf-petljadoc.json</span></code>, <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>) које у већини случајева није потребно мењати, а служе подешавању одређених параметара пројекта. Поред ових фајлова налази се и фолдер <code class="docutils literal notranslate"><span class="pre">_templates</span></code> који садржи елементе који ће контролисати изглед .HTML фајлова (ни садржај овог фолдера углавном није потребно мењати).</p>
 <p>У фолдеру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> налази се <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајл (о њему ће бити речи касније) као и фолдери у којима су смештени изворни <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајлови, у којима се заправо пише садржај пројекта у <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> формату.</p>
 <p>На крају, фолдер <code class="docutils literal notranslate"><span class="pre">_images</span></code> служи смештању слика које ће бити коришћене у оквиру материјала, а фолдер <code class="docutils literal notranslate"><span class="pre">_includes</span></code> служи смештању различитих типова фајлова које је потребно укључити у курс (.pdf, .py i sl.)</p>
 </div>
-<div class="section" id="id9">
-<h3>Рад на курсевима<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>Рад на курсевима<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p>Да бисте видели како ће се у браузеру приказати оно што пишете у <code class="docutils literal notranslate"><span class="pre">.rst</span></code> фајловима, потребно је да отворите командни прозор и да се позиционирате у фолдер пројекта - ово ћете најлакше урадити тако што ћете у Windows прозору тог фолдера у <em>search bar</em> укуцати <code class="docutils literal notranslate"><span class="pre">cmd</span></code> и притиснути ентер.</p>
 <a class="reference internal image-reference" href="_images/kurs1.png"><img alt="_images/kurs1.png" class="align-center" src="_images/kurs1.png" style="width: 600px;" /></a>
 <p>Након тога, унесите команду <cite>petljadoc preview</cite> и притисните ентер.</p>
@@ -330,22 +355,43 @@
 <a class="reference internal image-reference" href="_images/kurs8.png"><img alt="_images/kurs8.png" class="align-center" src="_images/kurs8.png" style="width: 600px;" /></a>
 <p>Ово ће отворити нови Visual Studio Code прозор у коме ћете са леве стране моћи да видите све фајлове и фолдере који се налазе унутар фолдера са пројектом, а, када одаберете жељени фајл, у средини ће бити садржај тог фајла.</p>
 <a class="reference internal image-reference" href="_images/kurs9.png"><img alt="_images/kurs9.png" class="align-center" src="_images/kurs9.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="section" id="rst">
 <h4>Модификовање .rst фајлова<a class="headerlink" href="#rst" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>Већина вашег рада свешће се на писање текста у restructuredText формату у .rst фајловима који се налазе у фолдеру _sources. Покушајте да промените неку реч у оквиру неког од .rst фајлова који се налазе у субфолдерима _sources фолдера и да запамтите ту промену (CTRL + S у Visual Studio Code). У позадини је, наравно, неопходно да постоји покренут командни прозор у коме је извршена команда <cite>petljadoc preview</cite>. Видећете како се у браузеру у реалном времену мења оно што сте написали.</p>
 <p>Препоручујемо да пре него што наставите са радом погледате овај курс <a class="reference external" href="https://petlja.github.io/demo_kurs/">https://petlja.github.io/demo_kurs/</a>.
 На овој страници можете пронаћи низ корисних савета и примера који ће вам помоћи да боље разумете како да форматирате своје restructuredText фајл и како у њега укључите елементе које желите. Такође, препоручујемо да <a class="reference external" href="https://github.com/Petlja/Primer_Kurs/archive/master.zip">овај пројекат</a> користите као мустру ако будете имали проблема са форматирањем фајлова или укључивањем фајлова у пројекат.</p>
 <p>Ако вам затреба нешто што се не налази у демо курсу, а потребно вам је за рад, погелдајте овај <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">линк</a>. Овде можете наћи и <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">синтаксни подсетник (cheatsheet)</a> који вам може бити користан приликом рада.</p>
 <p>Слободно се враћајте на линкове из овог поглавља и користите их као подсетник током целог процеса писања материјала.</p>
 <p>Међутим, поред модификације већ постојећих .rst фајлова, биће потребно да додајете и нове активности и за то ће бити неопходно да ажурирате .yaml фајл.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="yaml">
 <h4>Форматирање .yaml фајла<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p><strong>Јако је важно</strong> да током рада на курсу правилно ажурирате (попуњавате и форматирате) <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајл. У овом фајлу налазе се сви релеватни подаци које Петљадок користи да би од изворних фајлова направио .html фајлове. Све нове лекције и садржаје које желите да укључите у свој пројекат морате, са једне стране убацити на одговарајуће место у структури пројекта (у одговарајућ фолдер), а са друге стране морате их на одговарајући начин укључити у <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајл.</p>
 <p>Ово подразумева да <strong>ОБАВЕЗНО</strong> поштујете структуру назубљивања каква постоји у овом фајлу, Такође, јако је важно да се у подацима који се наводе у <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> поклапају са стањем у остатку пројекта. Када отворите <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> он ће изгледати као на слици испод.</p>
 <a class="reference internal image-reference" href="_images/kurs10.png"><img alt="_images/kurs10.png" class="align-center" src="_images/kurs10.png" style="width: 900px;" /></a>
 <p>Сада ћемо проћи кроз главне делове овог фајла и објаснити на шта је најважније обратити пажњу.</p>
-<p>Први део <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајла представља опште податке о курсу који ће се наћи на насловној страни курса када покренете <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>. Ово је потребно попунити подацима о курсу и јако је важно да назубљивање остане са истом структуром.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="index-yaml">
+<h4>Део index.yaml фајла са информацијама о курсу<a class="headerlink" href="#index-yaml" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Први део <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајла представља опште податке о курсу који ће се наћи на насловној страни курса када покренете <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>. Ово је потребно попунити подацима о курсу и <strong>јако је важно да назубљивање остане са истом структуром</strong> као што је представљено у следећем примеру.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">courseId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Test_primer</span> <span class="c1">#Jako je važno da ovaj ID bude jedinstven za svaki kurs</span>
 <span class="nt">lang</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sr-Cyrl</span> <span class="c1"># Ovde se definiše jezik projekta</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример Петљадок курса</span>
@@ -369,35 +415,72 @@
   <span class="nt">shortDescription</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Кратак опис пројекта</span>
 </pre></div>
 </div>
-<p>Други део <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајла односи се на лекције. У њему је такође јако важно одржати исту структуру назубљивања, али такође је јако важно обратити пажњу на имена фајлова и фолдера као и на <code class="docutils literal notranslate"><span class="pre">guid-e</span></code> елемената.  Овај део фајла почиње линијом у којој се налази <code class="docutils literal notranslate"><span class="pre">lessons:</span></code> (погледајте код испод или отворите <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> у свом пројекту).</p>
-<p>Након тога следе лекције које су увучене са два спејса. Свака лекција почиње редом у коме се налази <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">title:</span></code> У том реду потребно је написати назив лекције. У нашем примеру ставили смо као наслов прве лекције <strong>Наслов_1</strong>, а као наслов друге лекције <strong>Naslov_2</strong>.</p>
-<p>После наслова долази поље <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">folder:</span></code> у које се уноси назив фолдера у који су смештени фајлови лекције унутар <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. Он се <strong>МОРА ПОКЛАПАТИ</strong> са називом фолдера лекције (ћирилица, латиница, велика слова, знаци интерпункције…) На нашем примеру то су фолдери <code class="docutils literal notranslate"><span class="pre">Пример_лекција1</span></code> и <code class="docutils literal notranslate"><span class="pre">Пример_лекција2</span></code>.</p>
-<a class="reference internal image-reference" href="_images/kurs11.png"><img alt="_images/kurs11.png" class="align-center" src="_images/kurs11.png" style="width: 900px;" /></a>
-<p>Затим следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> лекције. Он је обавезан и представља јединствени идентификатор за сваки елемент. Њега можете добити тако што ћете га генерисати <a class="reference external" href="https://www.guidgenerator.com/online-guid-generator.aspx">овде</a> или тако што ћете приснути F1 у Visual Studio Code-у и ту изабрати опцију <code class="docutils literal notranslate"><span class="pre">insert</span> <span class="pre">guid</span></code> која ће вам бити видљива ако сте инсталирали екстензију коју смо навели у поглављу <em>Инсталација потребних алата</em>. Исти <code class="docutils literal notranslate"><span class="pre">guid</span></code> не смете да користите више од једном иначе ћете добити грешку приликом покретања команде <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>.</p>
-<p>Следеће поље представља опис лекције и оно је опционо. Поља <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">guid</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code> и <code class="docutils literal notranslate"><span class="pre">activities</span></code> морају бити поравната.</p>
-<p>На крају следе активности које се налазе у лекцији. Све активности морају бити увучене на начин на који је приказано у коду испод. Активности могу имати три типа <code class="docutils literal notranslate"><span class="pre">reeding</span></code>, <code class="docutils literal notranslate"><span class="pre">video</span></code> и <code class="docutils literal notranslate"><span class="pre">quiz</span></code>. Ако се ради о активности у којој се од ученика очекује да прочита неки текст (интерактиван или “обичан”), тип активности треба означити као <code class="docutils literal notranslate"><span class="pre">reeding</span></code>.</p>
-<p>Након типа следи име ове активности у пољу <code class="docutils literal notranslate"><span class="pre">title</span></code>.</p>
-<p>Испод тога налази се фајл који представља изворни фајл ове активности. То може бити .rst фајл који се налази у фолдеру лекције (субфолдер унутар фолдера <code class="docutils literal notranslate"><span class="pre">_sources</span></code>.) или .pdf фајл који треба да се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">_static</span></code> (у фолдеру пројекта). Име фајла овде мора <strong>дословно</strong> да се наведе (обратите пажњу на писмо, величину слова и на екстензију фајла).</p>
-<p>Након тога следи опис активности који је опцион и након тога следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> (потребно је поново генерисати нови, јединствени <code class="docutils literal notranslate"><span class="pre">guid</span></code> за сваку активност).</p>
-<p>Ако је активност типа <code class="docutils literal notranslate"><span class="pre">video</span></code>, потребно је навести линк ка видеу и наслов видеа може бити произвољан.</p>
-<p>Ако је активност типа <code class="docutils literal notranslate"><span class="pre">quiz</span></code>, потребно је навести име .rst фајла у коме се налазе питања за квиз, а који је смештен у фолдер лекције у оквиру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера.</p>
-<p>У лекцији нема ограничења на број активности.</p>
-<p>Kада завршите са активностима, следи поље архивираних активности које је потребно поравнати са насловом лекције. Овде је потребно навести листу guid-a активности које су некада постојале у курсу и објављене су на петљи, а сада више не постоје. Ако таквих активности нема, слободно игноришите овај део фајла. Ако неку активност желите да обришете из курса, а некада је објављена на Петљи <strong>ЈАКО ЈЕ ВАЖНО</strong> да њен гуид ставите међу архивиранеактивности.</p>
-<p>Када желите да пређете на следећу лекцију, пазите на поравнање и на то да сваки елемент мора имати јединствен <code class="docutils literal notranslate"><span class="pre">guid</span></code>. Важно је да свака нова лекција буде поравната са претходним лекцијама.</p>
+<p>На следећој слици приказано је како наведени елементи изгледају на примеру курса који је објављен на Петљи:</p>
+<a class="reference internal image-reference" href="_images/kurs14.png"><img alt="_images/kurs14.png" class="align-center" src="_images/kurs14.png" style="width: 900px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>Део index.yaml фајла са информацијама о лекцијама<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Други део <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> фајла односи се на лекције у којима је сав садржај курса. У њему је такође јако важно одржати исту структуру назубљивања, али мора се обратити пажња и на имена фајлова и фолдера као и на <code class="docutils literal notranslate"><span class="pre">guid-e</span></code> елемената.  Овај део фајла почиње линијом у којој се налази <code class="docutils literal notranslate"><span class="pre">lessons:</span></code> и која је поравната са левом ивицом екрана (погледајте код испод или отворите <code class="docutils literal notranslate"><span class="pre">index.yaml</span></code> у свом пројекту).</p>
+<p>Први ниво хијерархије у оквиру курса представљају лекције, а други ниво хијерархије представљају активности у оквиру лекција. Ако погледамо следећи пример видећемо да се ради о курсу који има 2 лекције и да у свакој од њих постоји по једна активност.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">lessons</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Наслов_1</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Лекција_1</span>
     <span class="nt">folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекција1</span>
     <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c2c651cd-53d9-4a3d-ba4f-650b8422f0bc</span>
     <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Прва лекција</span>
     <span class="nt">activities</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reading</span>
-        <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример фајла</span>
-        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_1.rst</span> <span class="c1"># fajl se označava onako kako je u source folderu, pa se u zavisnosti od tipa fajla prilagođava tip lekcije (reading, video, quiz)</span>
-        <span class="nt">description</span><span class="p">:</span> <span class="c1">#opciono</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reeding</span>
+        <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Активност_1</span>
+        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_1.rst</span>
+        <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="c1">#opciono</span>
         <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">71c00155-f7f3-410d-8019-e88d22cb7f01</span>
-        <span class="c1">#ova varijantasa /alias je samo za fazu migracije, poenta je da ako nije pronađen, onda se traži po aliasu,</span>
-        <span class="c1">#pa ako se nađe i guid je NULL, upisuje se, a inače se javlja greška. Kada se tako postave guidi, posle može da se obriše /alias</span>
-    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reading</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Lekcija_2</span>
+    <span class="nt">folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекција2</span>
+    <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c79a8591-ad06-4e46-9d4d-8ecb5361cf8c</span>
+    <span class="nt">description</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">Друга лекција</span>
+    <span class="nt">activities</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reeding</span>
+        <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Aktivnost_2</span>
+        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_2.rst</span>
+        <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="c1">#opciono</span>
+        <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4576c9a4-2071-4a21-b221-a646477e05be</span>
+</pre></div>
+</div>
+<p>Овај пример .yaml фајла одговара следећој слици:</p>
+<a class="reference internal image-reference" href="_images/kurs15.png"><img alt="_images/kurs15.png" class="align-center" src="_images/kurs15.png" style="width: 900px;" /></a>
+<p>У садржају се види да су у првом нивоу хијерархије приказане лекције, а у другом нивоу активности у оквиру тих лекција.</p>
+<p>Свака лекција почиње редом у коме се налази <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">title:</span></code> и који је са два спејса увучен у односу на почетни ред овог дела фајла у коме се налази <code class="docutils literal notranslate"><span class="pre">lessons:</span></code>. Поред ознаке <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">title:</span></code> потребно је написати назив лекције. У нашем примеру ставили смо као наслов прве лекције <strong>Лекција_1</strong>, а као наслов друге лекције <strong>Lekcija_2</strong>. Обратите пажњу да је наслове могуће навести и ћирилицом и латиницом и стрингови које овде наведете као називе лекција приказаће се у садржају курса са леве стране.</p>
+<p>После наслова долази поље <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">folder:</span></code> у које се уноси назив фолдера у који су смештени фајлови лекције унутар <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера. Он се <strong>МОРА ПОКЛАПАТИ</strong> са називом фолдера лекције (ћирилица, латиница, велика слова, знаци интерпункције…) На нашем примеру то су фолдери <code class="docutils literal notranslate"><span class="pre">Пример_лекција1</span></code> и <code class="docutils literal notranslate"><span class="pre">Пример_лекција2</span></code>. Назив фолдера се може разликовати од наслова лекције.</p>
+<a class="reference internal image-reference" href="_images/kurs11.png"><img alt="_images/kurs11.png" class="align-center" src="_images/kurs11.png" style="width: 900px;" /></a>
+<p>Затим следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> лекције. Он је обавезан и представља јединствени идентификатор за сваки елемент курса. Њега можете добити тако што ћете га генерисати <a class="reference external" href="https://www.guidgenerator.com/online-guid-generator.aspx">овде</a> или тако што ћете приснути F1 у Visual Studio Code-у и ту изабрати опцију <code class="docutils literal notranslate"><span class="pre">insert</span> <span class="pre">guid</span></code> која ће вам бити видљива ако сте инсталирали екстензију коју смо навели у поглављу <em>Инсталација потребних алата</em>. Исти <code class="docutils literal notranslate"><span class="pre">guid</span></code> не смете да користите више од једном иначе ћете добити грешку приликом покретања команде <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code>.</p>
+<p>Следеће поље представља опис лекције и оно је опционо. Поља <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">guid</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code> и <code class="docutils literal notranslate"><span class="pre">activities</span></code> морају бити поравната. Када желите да пређете на следећу лекцију, пазите на поравнање и на то да сваки елемент мора имати јединствен <code class="docutils literal notranslate"><span class="pre">guid</span></code>. Важно је да свака нова лекција буде поравната са претходним лекцијама.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h4>Типови активности<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>У оквиру лекција налазе се активности. Све активности морају бити увучене на начин на који је приказано у коду испод. Активности могу имати три типа <code class="docutils literal notranslate"><span class="pre">reeding</span></code>, <code class="docutils literal notranslate"><span class="pre">video</span></code> и <code class="docutils literal notranslate"><span class="pre">quiz</span></code>. Ако се ради о активности у којој се од ученика очекује да прочита неки текст (интерактиван или “обичан”), тип активности треба означити као <code class="docutils literal notranslate"><span class="pre">reeding</span></code>, у активности типа <code class="docutils literal notranslate"><span class="pre">video</span></code>, читалац ће видети само видео плејер у коме ће бити смештен жељени видео и у активности типа <code class="docutils literal notranslate"><span class="pre">quiz</span></code>, од читаоца се очекује да одговори на питања. Све активности у оквиру једне лекције морају бити поравнате и свака има слична поља која треба попунити. У лекцији нема ограничења на број активности.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">lessons</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Лекција_1</span>
+    <span class="nt">folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекција1</span>
+    <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c2c651cd-53d9-4a3d-ba4f-650b8422f0bc</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Прва лекција</span>
+    <span class="nt">activities</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reeding</span>
+        <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример фајла</span>
+        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_1.rst</span>
+        <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="c1">#opciono</span>
+        <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">71c00155-f7f3-410d-8019-e88d22cb7f01</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reeding</span>
         <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример pdf фајла</span>
         <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_dokument.pdf</span>
         <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -409,36 +492,167 @@
         <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">61657689-aa6b-46c9-87da-51869d6477ee</span>
     <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">quiz</span>
         <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример теста</span>
-        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_test_1.rst</span> <span class="c1"># kada uvedemo struktuirani format, ovde će moći da stoji test1.quiz.yaml</span>
+        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_test_1.rst</span>
+        <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+        <span class="l l-Scalar l-Scalar-Plain">guid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">a725f29a-b323-4a1a-b52d-6eae141bc243</span>
+</pre></div>
+</div>
+<p>У овом примеру видимо један пројекат у коме се у првој лекцији налазе 4 активности различитих типова. Поље <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">type</span></code> увек је поравнато са <code class="docutils literal notranslate"><span class="pre">activities:</span></code> док су сва поља унутар једне активнсти увучена са четири спејса.</p>
+<p>Горе наведени пројекат у браузеру изгледа овако:</p>
+<a class="reference internal image-reference" href="_images/kurs16.png"><img alt="_images/kurs16.png" class="align-center" src="_images/kurs16.png" style="width: 900px;" /></a>
+</div>
+<div class="section" id="reeding">
+<h4>Активност reeding<a class="headerlink" href="#reeding" title="Permalink to this headline">¶</a></h4>
+<p>Код активности овог типа прво наводимо наслов активности у пољу <code class="docutils literal notranslate"><span class="pre">title:</span></code> који ће се приказати у садржају. Tо може бити било који стринг.</p>
+<p>У следећем пољу, <code class="docutils literal notranslate"><span class="pre">file:</span></code> наводимо фајл који представља изворни фајл ове активности. То може бити .rst фајл који се налази у фолдеру лекције (субфолдер унутар фолдера <code class="docutils literal notranslate"><span class="pre">_sources</span></code>.) или .pdf фајл који треба да се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">_static</span></code> (у фолдеру пројекта). Име фајла овде мора <strong>дословно</strong> да се наведе (обратите пажњу на писмо, величину слова и на екстензију фајла).</p>
+<p>Након тога следи опис активности који је опцион и након тога следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> (потребно је поново генерисати нови, јединствени <code class="docutils literal notranslate"><span class="pre">guid</span></code> за сваку активност).</p>
+<p>Ако смо активност овог типа укључили из .rst фајла, наш крајњи резултат у браузеру ће се приказати овако:</p>
+<a class="reference internal image-reference" href="_images/kurs17.png"><img alt="_images/kurs17.png" class="align-center" src="_images/kurs17.png" style="width: 900px;" /></a>
+<p>Док ће се активност овог типа коју смо укључили из .pdf фајла приказати овако:</p>
+<a class="reference internal image-reference" href="_images/kurs18.png"><img alt="_images/kurs18.png" class="align-center" src="_images/kurs18.png" style="width: 900px;" /></a>
+</div>
+<div class="section" id="video">
+<h4>Активност video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h4>
+<p>Ако је активност типа <code class="docutils literal notranslate"><span class="pre">video</span></code>, поља која користимо су слична. И код активности овог типа прво наводимо наслов активности у пољу <code class="docutils literal notranslate"><span class="pre">title:</span></code> који ће се приказати у садржају. Tо може бити било који стринг.</p>
+<p>Следеће је поље <code class="docutils literal notranslate"><span class="pre">url:</span></code> у које је потребно унети цео урл видеа на Youtube или само Id видеа, који представља 11 карактера након секвенце <strong>v=</strong>.</p>
+<p>Након тога следи опис активности који је опцион и након тога следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> (потребно је поново генерисати нови, јединствени <code class="docutils literal notranslate"><span class="pre">guid</span></code> за сваку активност).</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Укључивање видеа</p>
+<p>Обратите пажњу да ако видео у свој пројекат укључите на овај начин, цела једна активност биће видео који сте навели. Ако желите да у оквиру текста (у оквиру активности <code class="docutils literal notranslate"><span class="pre">reeding</span></code>) укључите видео, то можете урадити користећи директиву <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">ytpopup::</span></code>. Више о томе можете видеи <a class="reference external" href="https://petlja.github.io/demo_kurs/02_basics/02_directives.html#ytpopup">на следећем линку</a>.</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="quiz">
+<h4>Активност quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h4>
+<p>Као и код осталих типова активности, и код активности типа <code class="docutils literal notranslate"><span class="pre">quiz</span></code> наводимо у првом пољу наслов активности, а затим у пољу <code class="docutils literal notranslate"><span class="pre">file</span></code> наводимо име .rst фајла у коме се налазе питања за квиз. Овај фајл је смештен у фолдер лекције у оквиру <code class="docutils literal notranslate"><span class="pre">_sources</span></code> фолдера.</p>
+<p>Након тога следи опис активности који је опцион и након тога следи <code class="docutils literal notranslate"><span class="pre">guid</span></code> (потребно је поново генерисати нови, јединствени <code class="docutils literal notranslate"><span class="pre">guid</span></code> за сваку активност).</p>
+<p>Да бисте видели како треба да изгледа .rst фајл који садржи квиз и које све типове питања можете искористити у својим квизовима, погледајте <a class="reference external" href="https://petlja.github.io/demo_kurs/02_basics/02_directives.html#id22">ово поглавље</a> нашег демо курса.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h4>Архивирање лекција и активности - како избрисати активност/лекцију из пројекта<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Ако у оквиру вашег курса постоје неке активности или лекције које су некада објављене на Петљи, али су током рада на курсу и ажурирања објављене верзије курса уклоњене, <strong>ОБАВЕЗНО ЈЕ</strong> њихове гуиде ставити у поље архивираних лекција или поље архивираних активности.</p>
+<p>Ако се ради о лекцијама које желимо да архивирамо, поље архивираних лекција, <code class="docutils literal notranslate"><span class="pre">archived-lessons:</span></code>, смешта се на крај .yaml фајл поравнато са пољем <code class="docutils literal notranslate"><span class="pre">lessons:</span></code>. Након тога се увучено наводе гуиди свих архивираних лекција.</p>
+<p>Ако се ради о активностима унутар лекија, на крају сваке лекције треба навести поље архивираних активности, <code class="docutils literal notranslate"><span class="pre">archived-activities:</span></code> које је потребно поравнати са насловом лекције. У оквиру тог поља, увучено, треба навести гуиде свих активности које желимо да архивирамо.</p>
+<p>Погледајте како је то урађено на следећем примеру:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">lessons</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Лекција_1</span>
+    <span class="nt">folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекција1</span>
+    <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c2c651cd-53d9-4a3d-ba4f-650b8422f0bc</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Прва лекција</span>
+    <span class="nt">activities</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reeding</span>
+        <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример фајла</span>
+        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_1.rst</span>
+        <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="c1">#opciono</span>
+        <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">71c00155-f7f3-410d-8019-e88d22cb7f01</span>
+    <span class="nt">archived-activities</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">de4d8ced-7457-4257-a156-250bdb711d65</span>
+      <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22752682-f23f-4df7-b590-e22780fda0a3</span>
+<span class="nt">archived-lessons</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3ced8ac6-8be7-4921-bea7-dccf89a7cc79</span>
+  <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">29a3a23a-0cdb-4a2b-ad6b-611d36c39db5</span>
+</pre></div>
+</div>
+<p>У овом примеру видимо један курс у коме постоји једна лекција са једном активношћу, али и 2 архивиране активности у оквиру те лекције као и две архивиране лекције у оквиру курса.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h4>Пример комплетног .yaml фајла<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Овако би изгледао један комплетан .yaml фајл курса са спојеним првим и другим делом фајла, који се тичу информација о курсу и лекцијама, и који у себи садржи две лекције са разлиитим типовима активости као и архивиране лекције и активности</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">courseId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kurs-primer</span>
+<span class="nt">lang</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sr-Cyrl</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример курса</span>
+<span class="nt">description</span><span class="p">:</span>
+<span class="nt">willLearn</span><span class="p">:</span> <span class="c1"># list</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Научићете 1</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Научићете 2</span>
+<span class="nt">requirements</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Имаш инсталиран Пајтон</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Имаш инсталиран Петљадок</span>
+<span class="nt">toc</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекције</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекције2</span>
+<span class="nt">externalLinks</span><span class="p">:</span> <span class="c1"># opciono</span>
+  <span class="p p-Indicator">-</span> <span class="nt">text</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Синтакса restructuredText</span>
+    <span class="nt">href</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://docutils.sourceforge.io/docs/user/rst/quickref.html</span>
+  <span class="p p-Indicator">-</span> <span class="nt">text</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Синтакса restructuredText 2</span>
+    <span class="nt">href</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html</span>
+<span class="nt">longDescription</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">Овде је потребно унети дужи опис пројекта</span>
+<span class="nt">shortDescription</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">Овде можете унети краћи опис пројекта</span>
+
+<span class="nt">lessons</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Наслов_1</span>
+    <span class="nt">folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекција1</span>
+    <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c2c651cd-53d9-4a3d-ba4f-650b8422f0bc</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Прва лекција</span>
+    <span class="nt">activities</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reading</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример фајла</span>
+        <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_1.rst</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="c1">#opciono</span>
+        <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">71c00155-f7f3-410d-8019-e88d22cb7f01</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reading</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример pdf фајла</span>
+        <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_dokument.pdf</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+        <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">d90350ae-84e4-4e49-bac8-2d4849e3c409</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">video</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример видеа</span>
+        <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.youtube.com/watch?v=flu3-ntQIlE</span>
+        <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">61657689-aa6b-46c9-87da-51869d6477ee</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">quiz</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример теста</span>
+        <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_test_1.rst</span>
         <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
         <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a725f29a-b323-4a1a-b52d-6eae141bc243</span>
-    <span class="nt">archived-activities</span><span class="p">:</span> <span class="c1"># ne smeta ni ako se ostave drugi atribudi iz aktivnosti, ali se gleda samo guid</span>
-    <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">de4d8ced-7457-4257-a156-250bdb711d65</span>
-    <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22752682-f23f-4df7-b590-e22780fda0a3</span>
+    <span class="nt">archived-activities</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">de4d8ced-7457-4257-a156-250bdb711d65</span>
+      <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22752682-f23f-4df7-b590-e22780fda0a3</span>
   <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Naslov_2</span>
     <span class="nt">folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Пример_лекција2</span>
     <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c79a8591-ad06-4e46-9d4d-8ecb5361cf8c</span>
     <span class="nt">description</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">Друга лекција</span>
     <span class="nt">activities</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reading</span>
-        <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Primer rst fajla</span>
-        <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_2.rst</span> <span class="c1"># fajl se označava onako kako je u source folderu, pa se u zavisnosti od tipa fajla prilagođava tip lekcije (reading, video, quiz)</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">reading</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Primer rst fajla</span>
+        <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primer_2.rst</span>
         <span class="nt">description</span><span class="p">:</span> <span class="c1">#opciono</span>
         <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4576c9a4-2071-4a21-b221-a646477e05be</span>
-        <span class="c1">#ova varijantasa /alias je samo za fazu migracije, poenta je da ako nije pronađen, onda se traži po aliasu,</span>
-        <span class="c1">#pa ako se nađe i guid je NULL, upisuje se, a inače se javlja greška. Kada se tako postave guidi, posle može da se obriše /alias</span>
-<span class="nt">archived-lessons</span><span class="p">:</span> <span class="c1"># ne smeta ni ako se ostave drugi atribudi iz aktivnosti, ali se gleda samo guid</span>
-<span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3ced8ac6-8be7-4921-bea7-dccf89a7cc79</span>
-<span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">29a3a23a-0cdb-4a2b-ad6b-611d36c39db5</span>
+<span class="nt">archived-lessons</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3ced8ac6-8be7-4921-bea7-dccf89a7cc79</span>
+  <span class="p p-Indicator">-</span> <span class="nt">guid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">29a3a23a-0cdb-4a2b-ad6b-611d36c39db5</span>
 </pre></div>
 </div>
-<p>Као што сте видели до сад, важно је да алтернирате између Visual Studio Code-a у коме ћете гледати изворне фајлове и браузера у коме ћете видети приказ онога што правите у изворним фајловима.</p>
-<p>Такође, важно је да када год додајете нешто ново од изворних фајлова, то на одговарајући начин назначите у .yaml фајлу како би Петљадок знао шта да прикаже у браузеру.</p>
 
     <div class="course-box course-box-info">
         <div class="course-content">
             <p>
-<p>Подсетник и смернице:</p>
+<p><strong>Савет</strong></p>
+<p>Као што сте видели до сад, важно је да алтернирате између Visual Studio Code-a у коме ћете гледати изворне фајлове и браузера у коме ћете видети приказ онога што правите у изворним фајловима.</p>
+<p>Такође, важно је да када год додајете нешто ново од изворних фајлова, то на одговарајући начин назначите у .yaml фајлу како би Петљадок знао шта да прикаже у браузеру.</p>
+
+    </p></div></div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Подсетник и смернице:</strong></p>
 <ul class="simple">
 <li><p>Изворни фајлови (.rst) налазе се унутар потфолдера унуар фолдера <code class="docutils literal notranslate"><span class="pre">_sources</span></code></p></li>
 <li><p>Ако желите да укључите .pdf фајл, сместие га у <code class="docutils literal notranslate"><span class="pre">_static</span></code> фолдер</p></li>
@@ -456,8 +670,25 @@
 </div>
 </div>
 </div>
-<div class="section" id="id10">
-<h2>Корисни линкови<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h2>Грешке<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>Приликом рада, често ће се десити да негде погрешите, било да се ради о погрешном форматирању .yaml фајла приликом рада са курсевима, било да се ради о синтаксној грешци приликом писања reStructuredText кода, било да се ради о укључивању фајла који не постоји… Кад год се деси нешто што Петљадок препознаје као грешку, у оквиру командног прозора у коме сте покренули <code class="docutils literal notranslate"><span class="pre">petljadoc</span> <span class="pre">preview</span></code> команду, црвеним словима исписаће се порука о грешци и та порука изгледаће као на следећој слици:</p>
+<a class="reference internal image-reference" href="_images/greska1.png"><img alt="_images/greska1.png" class="align-center" src="_images/greska1.png" style="width: 900px;" /></a>
+<p>У оквиру те поруке, која год да је грешка направљена, писаће у ком фајлу је грешка настала и на којој линији кода у оквиру тог фајла се грешка појавила. Такође, у оквиру поруке биће назначено и шта није у реду са кодом, то јест због чега Петљадок није успео да на одговарајућ начин избилдује ваш пројекат. У овом конкретном случају, видимо да у фајлу <code class="docutils literal notranslate"><span class="pre">petladoc.rst</span></code> који се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">_sources</span></code> у оквиру нашег пројекта, на линији 402 на погрешан начин форматирана директива за укључивање слике.</p>
+<p>Такође, када бисмо погледали како у браузеру изгледа фајл који је избилдован уз грешку, видећемо да се на месту где треба да се појави слика такође појављује иста порука о грешци</p>
+<a class="reference internal image-reference" href="_images/greska2.png"><img alt="_images/greska2.png" class="align-center" src="_images/greska2.png" style="width: 900px;" /></a>
+<p>У овом примеру проблем је у томе што имамо празан ред вишка између реда у коме се налази директива <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> и њених опција <code class="docutils literal notranslate"><span class="pre">:width:</span></code> и <code class="docutils literal notranslate"><span class="pre">:align:</span></code>. Грешку отклањамо брисањем тог реда и наш материјал ће се, након што запамтимо промене, у браузеру приказати без упозорења о грешци.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Важно</p>
+<p>Ако током рада приметите да се у браузеру приказују грешке на одређеним местима у материјалу на коме радите, <strong>НЕМОЈТЕ ИХ ИГНОРИСАТИ</strong> већ покушајте да их исправите или контактирајте неког из тима Петље да вам помогне у исправљању грешака. <strong>ВАШ МАТЕРИЈАЛ НЕЋЕ МОЋИ ДА СЕ ОБЈАВИ АКО ИМА БИЛО КАКВИХ УПОЗОРЕЊА О ГРЕШКАМА</strong></p>
+
+    </p></div></div>
+</div>
+<div class="section" id="id19">
+<h2>Корисни линкови<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Демо курс као помоћ за форматирање фајлова - <a class="reference external" href="https://petlja.github.io/demo_kurs/">https://petlja.github.io/demo_kurs/</a></p></li>
 <li><p>Поглавље <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">restructuredText</a> из документације Sphinx-а</p></li>

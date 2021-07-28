@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Workflow &#8212; Uputstvo Autorima</title>
+<title>&lt;no title&gt; &#8212; Uputstvo Autorima</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
@@ -173,7 +173,6 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Коришћење Github-a" href="github.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -235,52 +234,16 @@
 
 <div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
-  <div class="section" id="workflow">
-<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h1>
-<p>Овде ћемо у корацима описати како изгледа уобичајен рад са Петљадоком на неком курсу. Ако се заглавите на било ком од ових корака, препоручујемо да упоредите свој пројекат са <a class="reference external" href="https://github.com/Petlja/Primer_Kurs/archive/master.zip">ОВИМ ПРОЈЕКТОМ</a> који можете користити као мустру за форматирање.</p>
-<div class="section" id="id1">
-<h2>1. Клонирање репозиторијума<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Први корак пре почетка рада је да клонирате репо који је за вас направљен на Гитхабу. Линк ка репозиторијуму добићете од тима Фондације Петља. Ако још увек нисте видели како то да урадите погледајте <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/github.html">овде</a></p>
-</div>
-<div class="section" id="petljadoc-preview">
-<h2>2. Покретање команде <cite>petljadoc preview</cite><a class="headerlink" href="#petljadoc-preview" title="Permalink to this headline">¶</a></h2>
-<p>Када сте клонирали пројекат, други корак је да у фолдеру пројекта отворите командни прозор и покренете команду <cite>petljadoc preview</cite> што ће ваш пројекат приказати у браузеру. Овај корак погледајте у делу упутства <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/petljadoc.html#id9">https://petlja.github.io/Uputstvo_Autorima/petljadoc.html#id9</a>. Оставите командни прозор отвореним током рада на курсу.</p>
-</div>
-<div class="section" id="id2">
-<h2>3. Модификација већ постојећих фајлова<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Када сте покренули пројекат, у оквиру потфлодера унутар фолдера _sources налазе се .rst фајлови у којима се налази текст и главни други садржаји пројекта. Да бисте видели како да их форматирате погледајте материјале из овог поглавља <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/petljadoc.html#rst">https://petlja.github.io/Uputstvo_Autorima/petljadoc.html#rst</a>. Кад год нешто промените у изворним фајловима, не заборавите да запамтите промене (CTRL+S) и то ће промене ажурирати у прозору прегледача који приказује курс који правите.</p>
-</div>
-<div class="section" id="id3">
-<h2>4. Додавање нових поглавља и садржаја<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>Ако желите да додате ново поглавље, у оквиру фолдера _sources направите нови потфолдер који ће представљати лекцију у курсу и затим у њега додајте нове .rst фајлове који ће представљати појединачне активности у оквиру те лекције. Када то урадите, ажурирајте .yaml фајл на начин на који је то објашњено у овом поглављу <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/petljadoc.html#yaml">https://petlja.github.io/Uputstvo_Autorima/petljadoc.html#yaml</a>. Када форматирате овај фајл како је речено, запамтите промене и требало би да се ваше ново поглавље прикаже у браузеру (докле год у позадини ради командни прозор из корака 2.)</p>
-<a class="reference internal image-reference" href="_images/kurs13.png"><img alt="_images/kurs13.png" class="align-center" src="_images/kurs13.png" style="width: 600px;" /></a>
-<p>Дакле, као што је већ речено, фајлови у којима ћете писати текст курса налазе се у фолдеру <cite>_sources</cite>. У њему се налазе потфолдери који представљају лекције, а унутар тих потфолдера налазе се .rst фајлови који представљају активности унутар тих лекција. Обавезно ажурирајте index.yaml сваки пут када уводите неки нови елемент у свој курс.</p>
-<a class="reference internal image-reference" href="_images/kurs12.png"><img alt="_images/kurs12.png" class="align-center" src="_images/kurs12.png" style="width: 600px;" /></a>
-<a class="reference internal image-reference" href="_images/kurs13.png"><img alt="_images/kurs13.png" class="align-center" src="_images/kurs13.png" style="width: 600px;" /></a>
-<p>У истом поглављу је објашњено и како да додате садржаје који нису текстуалног типа (квизове, .pdf фајлове, видео…)</p>
-</div>
-<div class="section" id="id4">
-<h2>5. Завршетак рада и поновни почетак рада<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Када сте завршили са радом, можете искључити командни прозор.</p>
-<p>На крају, обавезно промене које сте направили пошаљите на Гитхаб репозиторијум. То такође можете видети овде <a class="reference external" href="https://petlja.github.io/Uputstvo_Autorima/github.html">овде</a></p>
-<p>Када следећи пут почнете са радом, не заборавите да повучете евентуалне промене са репозиторијума (такође објашњено на претходном линку). Поново покрените командни прозор (корак 2) и наставите даље по корацима као и раније.</p>
-<p>Како је Петљадок алат који се стално развија, не заборавите да са времена на време унапредите верзију коју имате на свом рачунару. То можете урадити тако што ћете отворити командни прозор и покренути команду <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">petljadoc</span> <span class="pre">--upgrade</span></code> што ће инсталирати нову верзију Петљадока. Пре него што покренете ову команду, неопходно је да већ имате инсталиран Петљадок на начин на који је објашњено <a class="reference external" href="instalacija_python.html">овде</a>.</p>
-<p>Ако будете имали било каквих проблема, слободно пишите на <a class="reference external" href="mailto:lazar&#46;bojicic&#37;&#52;&#48;petlja&#46;org">lazar<span>&#46;</span>bojicic<span>&#64;</span>petlja<span>&#46;</span>org</a></p>
-</div>
-</div>
+  <p>{rtf1}</p>
 
 
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Коришћење Github-a' data-toggle="tooltip"><a href="github.html">Previous chapter</a></li>
-    
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Коришћење Github-a' data-toggle="tooltip"><a href="github.html">Претходно поглавље</a></li> -->
-    <!--  -->
     <!-- -->
 <!-- </ul> -->
 
