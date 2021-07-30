@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Упутство ауторима при изради приручника &#8212; Uputstvo Autorima</title>
+<title>Упутство ауторима за коришћење Петљадока &#8212; Uputstvo Autorima</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
@@ -236,8 +236,12 @@
 <div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Упутство ауторима при изради приручника<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Упутство ауторима за коришћење Петљадока<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Ово упутство представља кратак увод у технологије које Фондација Петља користи у изради својих едукативних садржаја. Упутство покрива инсталацију Пајтона и свих пакета и библиотека неопходних за рад. Након тога, следи упознавање са алатима садржаним у <code class="docutils literal notranslate"><span class="pre">PetljaDoc-u</span></code> и кратке смернице за израду приручника и курсева помоћу ових алата. На крају, упутством је покривено и неколико основних смерница за коришћење Github-a.</p>
+<div class="section" id="petljadoc">
+<h2>Шта је Petljadoc<a class="headerlink" href="#petljadoc" title="Permalink to this headline">¶</a></h2>
+<p>Петљадок представља низ алата који омогућују прављење интерактивних материјала за учење какве можете видети на сајту <a class="reference external" href="https:\petlja.org">petlja.org</a>. Ови материјали представљају курсеве и приручнике у које је могуће укључити Пајтон код тако да се извршава у браузеру, различите вежбе, интерактивна питања, слике, видео, звучне фајлове и сл.</p>
+<p>Петљадок у основи има <a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Runestone Interactive</a> и <a class="reference external" href="https://github.com/sphinx-doc/sphinx">Sphinx</a>. Runestone користи <code class="docutils literal notranslate"><span class="pre">restructuredText</span></code> као језик за обележавање текста (markup language) у својим изворним фајловима. Изворни фајлови ових Runestone пројеката су у <code class="docutils literal notranslate"><span class="pre">.rst</span></code> формату и помоћу Петљадока их претварамо у <code class="docutils literal notranslate"><span class="pre">.html</span></code> фајлове које браузер може да приказује.</p>
 <blockquote>
 <div><div class="toctree-wrapper compound">
 <ul>
@@ -248,40 +252,6 @@
 <li class="toctree-l2"><a class="reference internal" href="instalacija_python.html#git-github-desktop">Инсталација Git и Github Desktop</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="petljadoc.html">Petljadoc употреба</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="petljadoc.html#id1">Шта је Petljadoc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="petljadoc.html#id2">Приручници</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="petljadoc.html#id3">Започињање рада на приручнику</a></li>
-<li class="toctree-l3"><a class="reference internal" href="petljadoc.html#id4">Изглед пројекта</a></li>
-<li class="toctree-l3"><a class="reference internal" href="petljadoc.html#id5">Рад на приручницима</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#index-rst">Index.rst и рад са фајловима</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="petljadoc.html#id8">Курсеви</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="petljadoc.html#id9">Започињање рада на курсу</a></li>
-<li class="toctree-l3"><a class="reference internal" href="petljadoc.html#id10">Изглед пројекта</a></li>
-<li class="toctree-l3"><a class="reference internal" href="petljadoc.html#id11">Рад на курсевима</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#rst">Модификовање .rst фајлова</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#yaml">Форматирање .yaml фајла</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#index-yaml">Део index.yaml фајла са информацијама о курсу</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#id12">Део index.yaml фајла са информацијама о лекцијама</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#id13">Типови активности</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#reeding">Активност reeding</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#video">Активност video</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#quiz">Активност quiz</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#id16">Архивирање лекција и активности - како избрисати активност/лекцију из пројекта</a></li>
-<li class="toctree-l4"><a class="reference internal" href="petljadoc.html#id17">Пример комплетног .yaml фајла</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="petljadoc.html#id18">Грешке</a></li>
-<li class="toctree-l2"><a class="reference internal" href="petljadoc.html#id19">Корисни линкови</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="github.html">Коришћење Github-a</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow.html">Workflow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="workflow.html#id1">1. Клонирање репозиторијума</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow.html#petljadoc-preview">2. Покретање команде <cite>petljadoc preview</cite></a></li>
@@ -290,9 +260,68 @@
 <li class="toctree-l2"><a class="reference internal" href="workflow.html#id4">5. Завршетак рада и поновни почетак рада</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="kursevi.html">Курсеви</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kursevi.html#id2">Започињање рада на курсу</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kursevi.html#id3">Изглед пројекта</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kursevi.html#id4">Рад на курсевима</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kursevi.html#rst">Модификовање .rst фајлова</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kursevi.html#yaml">Форматирање .yaml фајла</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kursevi.html#index-yaml"><strong>Део index.yaml фајла са информацијама о курсу</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kursevi.html#id5"><strong>Део index.yaml фајла са информацијама о лекцијама</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kursevi.html#id6"><strong>Типови активности</strong></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="kursevi.html#reeding"><strong>Активност reeding</strong></a></li>
+<li class="toctree-l5"><a class="reference internal" href="kursevi.html#video"><strong>Активност video</strong></a></li>
+<li class="toctree-l5"><a class="reference internal" href="kursevi.html#quiz"><strong>Активност quiz</strong></a></li>
+<li class="toctree-l5"><a class="reference internal" href="kursevi.html#id9"><strong>Архивирање лекција и активности - како избрисати активност/лекцију из пројекта</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="kursevi.html#id10"><strong>Пример комплетног .yaml фајла</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kursevi.html#id11">Корисни линкови</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prirucnici.html">Приручници</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prirucnici.html#id2">Започињање рада на приручнику</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prirucnici.html#id3">Изглед пројекта</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prirucnici.html#id4">Рад на приручницима</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prirucnici.html#index-rst">Index.rst и рад са фајловима</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prirucnici.html#id7">Корисни линкови</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="greske.html">Грешке</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="greske.html#id2">Честе грешке</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#title-underline-too-short">Наслов је погрешно форматиран - <code class="docutils literal notranslate"><span class="pre">title</span> <span class="pre">underline</span> <span class="pre">too</span> <span class="pre">short</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#image-file-not-readable">Слика не постоји - <code class="docutils literal notranslate"><span class="pre">image</span> <span class="pre">file</span> <span class="pre">not</span> <span class="pre">readable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#document-isn-t-included-in-any-toctree">Фајл није укључен у садржај- <code class="docutils literal notranslate"><span class="pre">document</span> <span class="pre">isn't</span> <span class="pre">included</span> <span class="pre">in</span> <span class="pre">any</span> <span class="pre">toctree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#id3">Директива није добила очекивани аргумент</a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#unexpected-indentation">Неочекивано увлачење - <code class="docutils literal notranslate"><span class="pre">unexpected</span> <span class="pre">indentation</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#inline-start-string-without-end-string">Незатворено обележавање текста - <code class="docutils literal notranslate"><span class="pre">Inline</span> <span class="pre">----</span> <span class="pre">start-string</span> <span class="pre">without</span> <span class="pre">end-string</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#id4">Више пута је употребљен исти ИД</a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#yaml">Грешке у форматирању .yaml фајла у курсевима</a></li>
+<li class="toctree-l3"><a class="reference internal" href="greske.html#guid-yaml">Дупликат guid у .yaml фајлу</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="greske.html#id7">Корисни линкови</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Коришћење Github-a</a></li>
 </ul>
 </div>
 </div></blockquote>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Ажурирање верзије Петљадока</p>
+<p>Како је Петљадок алат који се стално развија, не заборавите да са времена на време унапредите верзију коју имате на свом рачунару. То можете урадити тако што ћете отворити командни прозор и покренути команду <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">petljadoc</span> <span class="pre">--upgrade</span></code> што ће инсталирати нову верзију Петљадока. Пре него што покренете ову команду, неопходно је да већ имате инсталиран Петљадок на начин на који је објашњено <a class="reference external" href="instalacija_python.html">овде</a>.</p>
+
+    </p></div></div>
+</div>
 </div>
 
 
