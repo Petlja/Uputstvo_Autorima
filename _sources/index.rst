@@ -14,6 +14,7 @@
    .. toctree::
       :maxdepth: 5
 
+      quick_start.rst
       instalacija_python.rst
       workflow.rst
       kursevi.rst
