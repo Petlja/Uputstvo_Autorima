@@ -219,22 +219,27 @@
         guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
         description: Прва лекција
         activities:
-        - type: reeding
+          - type: reeding
             title: Пример фајла
             file: primer_1.rst 
             description: #opciono
             guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
-        - type: reeding
+          - type: reeding
             title: Пример pdf фајла
             file: primer_dokument.pdf
             description: ...
             guid: d90350ae-84e4-4e49-bac8-2d4849e3c409
-        - type: video
+          - type: reading
+            title: Пример радне свеске
+            file: primer_jupyter.ipynb
+            description: #opciono
+            guid: 57e77f40-0f7e-4067-b3fa-1408cdd67ea1
+          - type: video
             title: Пример видеа
             url: https://www.youtube.com/watch?v=flu3-ntQIlE # može da se navede i ceo YT url, a može i samo ID (id u bilo kom yt linku predstavlja 11 karatkera nakon v=)
             description: ...
             guid: 61657689-aa6b-46c9-87da-51869d6477ee
-        - type: quiz 
+          - type: quiz 
             title: Пример теста
             file: primer_test_1.rst
             description: ...
@@ -271,7 +276,11 @@
    :width: 900px   
    :align: center 
 
-|
+Активност reeding као изворни фајл може имати и Јупитер свеску у којој је пајтон код. У том случају фајл ће имати екстензију .ipynb и треба да се налази у оквиру одговарајућег субфолдера унутар фолдера _sources (исто као и .rst фајл). Фајл се на исти начин укључује и у .yaml фајл пројекта - у пољу ``file:`` наводимо назив фајла (са екстензијом), у пољу ``title:`` наводимо наслов који ће бити приказан у садржају, поље ``description`` је произвољно и у пољу ``guid`` наводимо јединствен код активности. 
+
+.. image:: ../_images/kurs18a.png
+   :width: 900px   
+   :align: center 
 
 **Активност video**
 ...................
@@ -379,6 +388,11 @@
            file: primer_dokument.pdf
            description: ...
            guid: d90350ae-84e4-4e49-bac8-2d4849e3c409
+         - type: reading
+           title: Пример радне свеске
+           file: primer_jupyter.ipynb
+           description: #opciono
+           guid: 57e77f40-0f7e-4067-b3fa-1408cdd67ea1
          - type: video
            title: Пример видеа
            url: https://www.youtube.com/watch?v=flu3-ntQIlE
